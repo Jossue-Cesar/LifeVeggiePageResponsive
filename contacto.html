@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con LifeVeggie. Estamos aquí para responder tus preguntas y recibir tus sugerencias.">
+    <title>Contacto - LifeVeggie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LifeVeggie</a>
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="main-navigation">☰</button>
+            <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+                <a href="index.html#productos">Productos</a>
+                <a href="index.html#categorias">Categorías</a>
+                <a href="index.html#beneficios">Beneficios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-secondary cart-button" type="button" aria-label="Ver carrito">
+                    Carrito <span class="cart-count">0</span>
+                </button>
+                <a href="Products.html" class="btn btn-primary">Comprar ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Hero de Contacto -->
+        <section class="hero contact-hero">
+            <div class="container hero-content">
+                <div>
+                    <p class="eyebrow">Queremos escucharte</p>
+                    <h1>¡Ponte en contacto con nosotros!</h1>
+                    <p>¿Tienes preguntas sobre nuestros productos? ¿Sugerencias o comentarios? Nos encantaría saber de ti. Llena el formulario o utiliza nuestros datos de contacto.</p>
+                    <ul class="hero-features">
+                        <li>Respuesta rápida a tus consultas</li>
+                        <li>Apoyo dedicado en español</li>
+                        <li>Información sobre productos y entregas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="section contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-wrapper">
+                        <h2>Envíanos un mensaje</h2>
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Nombre completo *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    placeholder="Tu nombre"
+                                    aria-required="true">
+                                <span class="form-error" id="name-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    placeholder="tu@correo.com"
+                                    aria-required="true">
+                                <span class="form-error" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Teléfono (opcional)</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="+51 999 999 999">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    required 
+                                    placeholder="¿En qué podemos ayudarte?"
+                                    aria-required="true">
+                                <span class="form-error" id="subject-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    required 
+                                    rows="6" 
+                                    placeholder="Cuéntanos tu consulta o comentario..."
+                                    aria-required="true"></textarea>
+                                <span class="form-error" id="message-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-btn">Enviar mensaje</button>
+                            <div class="form-success" id="form-success" style="display: none;">
+                                ✓ Tu mensaje ha sido enviado correctamente. Nos contactaremos pronto.
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Información de Contacto -->
+                    <aside class="contact-info">
+                        <h2>Información de contacto</h2>
+
+                        <div class="info-card">
+                            <h3> Ubicación</h3>
+                            <p>
+                                Calle Verde 123<br>
+                                Lima, Perú<br>
+                                Lima 15047
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3> Teléfono</h3>
+                            <p>
+                                <a href="tel:+51912345678">+51 (91) 234-5678</a><br>
+                                Lunes a viernes: 9:00 AM - 6:00 PM
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3> Email</h3>
+                            <p>
+                                <a href="mailto:hola@lifeveggie.com">hola@lifeveggie.com</a><br>
+                                <a href="mailto:soporte@lifeveggie.com">soporte@lifeveggie.com</a>
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3> Horarios</h3>
+                            <p>
+                                Lunes - Viernes: 9:00 AM - 6:00 PM<br>
+                                Sábado: 10:00 AM - 3:00 PM<br>
+                                Domingo: Cerrado
+                            </p>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Síguenos</h3>
+                            <div class="social-icons">
+                                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Mapa Interactivo (Opcional) -->
+        <section class="section map-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Encuéntranos</h2>
+                <div class="map-placeholder">
+                    <p> Aquí irá un mapa interactivo</p>
+                    <small>Puedes integrar Google Maps o Leaflet aquí</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de FAQ -->
+        <section class="section faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <span>Preguntas frecuentes</span>
+                    <h2>¿Tienes dudas?</h2>
+                    <p>Aquí encontrarás respuestas a las preguntas más comunes.</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-card">
+                        <h3>¿Cuál es el tiempo de entrega?</h3>
+                        <p>Realizamos entregas en Lima en 2-3 días hábiles. Para provincias, el tiempo puede variar entre 5-7 días hábiles.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <h3>¿Ofrecen envío gratis?</h3>
+                        <p>Sí, ofrecemos envío gratis para compras mayores a S/.50. Para órdenes menores, el costo es de S/.2.50.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <h3>¿Aceptan devoluciones?</h3>
+                        <p>Sí, aceptamos devoluciones dentro de 7 días después de la compra si el producto llega en mal estado.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <h3>¿Los productos son 100% veganos?</h3>
+                        <p>Todos nuestros productos son 100% veganos y certificados. No contienen ingredientes de origen animal.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <h3>¿Dónde puedo pagar?</h3>
+                        <p>Aceptamos tarjetas de crédito/débito, transferencia bancaria y billeteras digitales.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <h3>¿Hay descuentos para pedidos en cantidad?</h3>
+                        <p>Sí, contáctanos para consultar sobre descuentos especiales para compras al por mayor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 LifeVeggie. Todos los derechos reservados.</p>
+            <nav class="footer-nav" aria-label="Navegación de pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="Products.html">Productos</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>
