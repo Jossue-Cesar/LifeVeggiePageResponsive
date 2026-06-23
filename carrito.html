@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - LifeVeggie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">LifeVeggie</a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="Products.html">Productos</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <a href="index.html" class="btn btn-primary">Seguir comprando</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section products-section">
+            <div class="container">
+                <div class="section-title">
+                    <span>Tu compra</span>
+                    <h2>Carrito de productos</h2>
+                    <p>Revisa los productos que has seleccionado y completa tu pedido.</p>
+                </div>
+
+                <div class="cart-grid">
+                    <div class="cart-items">
+                        <!-- Los items del carrito se renderizan aquí mediante JS -->
+                    </div>
+                    <aside class="cart-summary">
+                        <div class="summary-card">
+                            <h3>Resumen del pedido</h3>
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal-value">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Envío</span>
+                                <span id="shipping-value">$0.00</span>
+                            </div>
+                            <div class="summary-row total-row">
+                                <strong>Total</strong>
+                                <strong id="total-value">$0.00</strong>
+                            </div>
+                            <button class="btn btn-primary checkout-button">Finalizar compra</button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 LifeVeggie. Todos los derechos reservados.</p>
+            <nav class="footer-nav" aria-label="Navegación de pie de página">
+                <a href="index.html#productos">Inicio</a>
+                <a href="Products.html">Productos</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
