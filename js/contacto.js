@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form) return;
 
-  // Campos requeridos
+ 
   const requiredFields = {
     name: document.getElementById('name'),
     email: document.getElementById('email'),
@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     message: document.getElementById('message')
   };
 
-  // Validar email
+
   function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
 
-  // Mostrar error
+
   function showError(fieldName, message) {
     const field = requiredFields[fieldName];
     const errorEl = document.getElementById(`${fieldName}-error`);
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Limpiar error
+
   function clearError(fieldName) {
     const field = requiredFields[fieldName];
     const errorEl = document.getElementById(`${fieldName}-error`);
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Validar campo en tiempo real
+
   Object.values(requiredFields).forEach((field) => {
     if (field) {
       field.addEventListener('blur', () => {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Limpiar error al escribir
+
       field.addEventListener('input', () => {
         const fieldName = field.id;
         clearError(fieldName);
@@ -64,17 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Envío del formulario
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Limpiar errores previos
+
     Object.keys(requiredFields).forEach(clearError);
 
-    // Validar todos los campos
+  
     let isValid = true;
 
-    // Validar nombre
+    
     const name = requiredFields.name.value.trim();
     if (!name) {
       showError('name', 'Por favor ingresa tu nombre');
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       isValid = false;
     }
 
-    // Validar email
+   
     const email = requiredFields.email.value.trim();
     if (!email) {
       showError('email', 'Por favor ingresa tu email');
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       isValid = false;
     }
 
-    // Validar asunto
+    
     const subject = requiredFields.subject.value.trim();
     if (!subject) {
       showError('subject', 'Por favor ingresa un asunto');
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       isValid = false;
     }
 
-    // Validar mensaje
+    
     const message = requiredFields.message.value.trim();
     if (!message) {
       showError('message', 'Por favor ingresa un mensaje');
@@ -114,17 +114,17 @@ document.addEventListener('DOMContentLoaded', () => {
       isValid = false;
     }
 
-    // Si todo es válido, procesar el formulario
+    
     if (isValid) {
-      // Simular envío (aquí iría una llamada a un servidor real)
+      
       const submitBtn = form.querySelector('.submit-btn');
       const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Enviando...';
       submitBtn.disabled = true;
 
-      // Simular delay de envío
+      
       setTimeout(() => {
-        // Aquí iría la lógica de envío real (fetch a un backend)
+        
         console.log('Formulario enviado:', {
           name,
           email,
@@ -133,26 +133,26 @@ document.addEventListener('DOMContentLoaded', () => {
           message
         });
 
-        // Mostrar mensaje de éxito
+        
         formSuccess.style.display = 'block';
 
-        // Resetear formulario
+        
         form.reset();
 
-        // Restaurar botón
+        
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
 
-        // Ocultar mensaje de éxito después de 5 segundos
+        
         setTimeout(() => {
           formSuccess.style.display = 'none';
         }, 5000);
 
-        // Hacer scroll hacia el mensaje de éxito
+        
         formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }, 1000);
     } else {
-      // Hacer scroll al primer error
+      
       const firstError = document.querySelector('.form-error.show');
       if (firstError) {
         firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
